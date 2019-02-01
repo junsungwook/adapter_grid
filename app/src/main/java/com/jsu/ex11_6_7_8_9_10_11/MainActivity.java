@@ -18,11 +18,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //그리드뷰 만들기
         final GridView gv = findViewById(R.id.gridView1);
+
+        //어댑터 만들기
         MyGridAdapter gAdapter = new MyGridAdapter(this);
         gv.setAdapter(gAdapter);
     }
 
+
+    //위에서 만든 어댑터에 대한 정보들
     public class MyGridAdapter extends BaseAdapter{
         Context context;
         public  MyGridAdapter(Context c){
